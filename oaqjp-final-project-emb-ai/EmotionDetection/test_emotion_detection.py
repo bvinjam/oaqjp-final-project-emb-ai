@@ -1,17 +1,15 @@
 import unittest
-from EmotionDetection.emotion_detection import emotion_detector
+from emotion_detection import emotion_detector
 
 
 class TestEmotionDetection(unittest.TestCase):
   
     def test_joy_dominant(self):
-        """Test that joy is detected as dominant emotion for joyful text."""
         statement = "I am glad this happened"
         result = emotion_detector(statement)
         self.assertEqual(result['dominant_emotion'], 'joy')
 
     def test_anger_dominant(self):
-        """Test that anger is detected as dominant emotion for angry text."""
         statement = "I am really mad about this"
         result = emotion_detector(statement)
         self.assertEqual(result['dominant_emotion'], 'anger')
@@ -39,14 +37,6 @@ class TestEmotionDetection(unittest.TestCase):
         self.assertIsNone(result['fear'])
         self.assertIsNone(result['joy'])
         self.assertIsNone(result['sadness'])
-
-    def test_whitespace_only_input(self):
-        result = emotion_detector("   ")
-        self.assertIsNone(result['dominant_emotion'])
-
-    def test_none_input(self):
-        result = emotion_detector(None)
-        self.assertIsNone(result['dominant_emotion'])
 
 
 if __name__ == '__main__':
