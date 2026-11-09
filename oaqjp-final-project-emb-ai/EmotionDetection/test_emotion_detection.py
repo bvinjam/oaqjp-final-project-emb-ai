@@ -1,0 +1,5 @@
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am glad this happened'))"
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I feel disgusted just hearing about this'))"
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am so sad about this'))"
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am really afraid that this will happen'))"
